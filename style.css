@@ -20,10 +20,14 @@ body {
     color: #fff;
 }
 
-.current-info {
+.header {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+}
+
+.current-info {
+    display: flex;
+    justify-content: end;
 }
 
 .date-container {
@@ -44,7 +48,7 @@ body {
 }
 
 .place-container {
-    text-align: end;
+
 }
 
 .place-container .time-zone {

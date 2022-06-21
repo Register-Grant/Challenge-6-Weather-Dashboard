@@ -7,6 +7,7 @@ const weatherForecastElement = document.getElementById("weather-forecast");
 const currentTempElement = document.getElementById("current-temp");
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+const cityName = document.getElementById("city-name");
 
 const API_KEY = '74fec2d8057ec0ff885d19b7ff4a5faa';
 
@@ -26,15 +27,13 @@ setInterval(() => {
 }, 1000);
 
 getWeatherData();
-function getWeatherData () {
+function getWeatherData (cityName) {
     navigator.geolocation.getCurrentPosition((success) => {
       
         let {latitude, longitude} = success.coords;
 
         // Getting a 401 unauthorized api key message here
-        fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=
-        ${latitude}&lon=${longitude}&exclude=hourly,minutely&units=imperial
-        &appid=${API_KEY}`).then(res => res.json()).then(data => {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=Tampa&appid=` + API_KEY).then(res => res.json()).then(data => {
         
         console.log(data);
         showWeatherData(data);
@@ -43,33 +42,21 @@ function getWeatherData () {
 }
 
 //I feel like I can grab whatever I want from the "current" object, like if I don't care about wind_speed
-function showWeatherData (data) {
-    let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
-
-    timeZoneElement.innerHTML = data.timezone;
-    countryElement.innerHTML = data.lat + 'N' + data.lon + 'E';
+function showWeatherData(data) {
 
     //Console log is saying humidity is undefined, but I'll bet that's because of the invalid api key
     currentWeatherItemsElement.innerHTML = 
     `<div class="weather-item">
-        <div>Impossible Humidity</div>
-        <div>${humidity}%</div>
+        <div>Temperature</div>
+        <div>${(data.main.temp)} &#176F</div>
     </div>
     <div class="weather-item">
-        <div>Pressure</div>
-        <div>${pressure}</div>
+        <div>Humidity</div>
+        <div>${data.main.humidity}%</div>
     </div>
     <div class="weather-item">
         <div>Wind Speed</div>
-        <div>${wind_speed}</div>
-    </div>
-    <div class="weather-item">
-        <div>Sunrise</div>
-        <div>${window.moment(sunrise*1000).format('HH:mm a')}</div>
-    </div>
-    <div class="weather-item">
-        <div>Sunset</div>
-        <div>${window.moment(sunset*1000).format('HH:mm a')}</div>
+        <div>${data.wind.speed} mph</div>
     </div>`;
 
     let otherDayForecast = ''

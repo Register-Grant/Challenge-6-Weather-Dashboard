@@ -9,24 +9,31 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="current-info">
-
-            <div class="date-container">
-                <div class="time" id="time">
-                    12:30 <span id="am-pm">pm</span>
-                </div>
-                <div class="date" id="date">
-                    Monday, June 18th
-                </div>
-                <div class="others" id="current-weather-items">
-                    
+    <div class="container header">
+        <div class="col-4 bg-light">
+            <p class="search-header my-1">Search for a City:</p>
+            <div class="input-group mb-3">
+                <input id="city-input" type="text" class="form-control" placeholder="Enter City Name" aria-label="Enter city name">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
             </div>
-
+            <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
+            <form id="history"></form>
+        </div>
+        <div class="current-info">
             <div class="place-container">
-                <div class="time-zone" id="time-zone">Mountain GMT</div>
-                <div class="country" id="country">USA</div>
+                <div class="date-container">
+                    <div class="time" id="time">
+                        12:30 <span id="am-pm">pm</span>
+                    </div>
+                    <div class="date" id="date">
+                        Monday, June 18th
+                    </div>
+                    <div class="others" id="current-weather-items"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -35,9 +42,9 @@
         <div class="today" id="current-temp">
             <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
             <div class="other">
-                <div class="day">Monday</div>
-                <div class="temp">Night - 115&#176; F</div>
-                <div class="temp">Day - 137&#176; F</div>
+                <div class="day"></div>
+                <div class="temp"></div>
+                <div class="temp"></div>
             </div>
         </div>
 
