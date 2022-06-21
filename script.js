@@ -20,7 +20,8 @@ setInterval(() => {
     const minutes = time.getMinutes();
     const ampm = hour >= 12 ? "PM" : "AM";
 
-    timeElement.innerHTML = hoursIn12HourFormat + ':' + minutes + ' ' + `<span id="am-pm">${ampm}</span>`
+    timeElement.innerHTML = (hoursIn12HourFormat < 10? '0' + hoursIn12HourFormat : hoursIn12HourFormat)
+     + ':' + (minutes < 10? '0' + minutes : minutes) + ' ' + `<span id="am-pm">${ampm}</span>`
     dateElement.innerHTML = days[day] + ', ' + date + ' ' + months[month];
 }, 1000);
 
@@ -44,6 +45,9 @@ function getWeatherData () {
 //I feel like I can grab whatever I want from the "current" object, like if I don't care about wind_speed
 function showWeatherData (data) {
     let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
+
+    timeZoneElement.innerHTML = data.timezone;
+    countryElement.innerHTML = data.lat + 'N' + data.lon + 'E';
 
     //Console log is saying humidity is undefined, but I'll bet that's because of the invalid api key
     currentWeatherItemsElement.innerHTML = 
