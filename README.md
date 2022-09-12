@@ -1,6 +1,6 @@
 # Challenge-6-Weather-Dashboard
   ## [GitHub Repo](https://github.com/Register-Grant/Challenge-8-Team-Profile-Generator)
-  ## [Link to Live Site]()
+  ## [Link to Live Site](https://register-grant.github.io/Challenge-6-Weather-Dashboard/)
   # Description
   This is a 5-day weather forecasting app.
   # Table of Contents
