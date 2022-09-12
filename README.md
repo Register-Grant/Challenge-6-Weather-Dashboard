@@ -1,19 +1,18 @@
 # Challenge-6-Weather-Dashboard
   ## [GitHub Repo](https://github.com/Register-Grant/Challenge-8-Team-Profile-Generator)
-  ## [Video Tutorial](https://drive.google.com/file/d/1kkiw4IeZC1EEBP5pRic9Qkxp6eM4pSls/view)
+  ## [Link to Live Site]()
   # Description
-  This is a Node.js command-line application that takes in information about employees and generates an HTML webpage that displays summaries for each person. Also required was the writing and passing of tests so that the code would be maintainable.
+  This is a 5-day weather forecasting app.
   # Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributions)
-  * [Tests](#tests)
   * [Questions](#questions)
   # Installation
-  The following necessary dependencies must be installed to run the application: Jest & Inquirer
+  The following necessary dependencies must be installed to run the application: Nada
   # Usage
-  In order to use this app, Run node index.js in the command line and then answer away
+  In order to use this app, just open in your default browser.
   # License
   The Apache license.
     [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
