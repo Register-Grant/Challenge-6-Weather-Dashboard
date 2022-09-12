@@ -37,7 +37,7 @@
 }
 
 .icons {
-    display: block; /* display: inline-block; */
+    /* display: inline-block; */
     float: left;
     height: 200px;
     width: 190px;
@@ -47,12 +47,12 @@
 }
 
 .image {
-    height: 140px;
+    height: 100px;
     width: 100%;
 }
 
 .imgClass {
-    height: 140px;
+    height: 100px;
     width: 100%;
 }
 
@@ -68,7 +68,7 @@
     display: inline-block;
     border-radius: 5px;
     height: 25px;
-    width: 85px;
+    width: 50px;
     margin: 0;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -79,7 +79,7 @@
     display: inline-block;
     border-radius: 5px;
     height: 25px;
-    width: 85px;
+    width: 50px;
     margin: 0;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -90,7 +90,7 @@
     display: inline-block;
     border-radius: 5px;
     height: 25px;
-    width: 85px;
+    width: 50px;
     margin: 0;
     margin-bottom: 5px;
     margin-left: 5px;

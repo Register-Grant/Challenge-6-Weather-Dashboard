@@ -4,49 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styletakethree.css">
+    <title>Weather Dashboard</title>
 </head>
 <body onload="DefaultScreen()">
     <center>
         <h1 id="Para1">5-DAY WEATHER FORECAST</h1>
     <p id="inputContainer">City: <input type="text" id="cityInput"></P>
-    <button>Click Me. Or Don't. Go Ahead. Be That Way.</button>
-    <h2 id="cityName">--Rome--</h2>
+    <button type="button" onclick="GetInfo()">Click Me. Or Don't. Go Ahead. Be That Way.</button>
+    <h2 id="cityName">--Tampa--</h2>
     </center>
     <div id="weatherContainer">
         <div id="iconContainer">
             <div class="icons">
                 <p class="weather" id="day1"></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img1" alt=""></div>
+                <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
                 <p class="tempValue" id="day1Temp">Loading...</p>
                 <p class="windValue" id="day1Wind">Loading...</p>
                 <p class="humidityValue" id="day1Humidity">Loading...</p>
             </div>
             <div class="icons">
                 <p class="weather" id="day2"></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img2" alt=""></div>
+                <div class="image"><img src="dots.png" class="imgClass" id="img2"></div>
                 <p class="tempValue" id="day2Temp">Loading...</p>
                 <p class="windValue" id="day2Wind">Loading...</p>
                 <p class="humidityValue" id="day2Humidity">Loading...</p>
             </div>
             <div class="icons">
                 <p class="weather" id="day3"></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img3" alt=""></div>
-                <p class="ttempValue" id="day3Temp">Loading...</p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img3"></div>
+                <p class="tempValue" id="day3Temp">Loading...</p>
                 <p class="windValue" id="day3Wind">Loading...</p>
                 <p class="humidityValue" id="day3Humidity">Loading...</p>
             </div>
             <div class="icons">
                 <p class="weather" id="day4"></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img4" alt=""></div>
+                <div class="image"><img src="dots.png" class="imgClass" id="img4"></div>
                 <p class="tempValue" id="day4Temp">Loading...</p>
                 <p class="windValue" id="day4Wind">Loading...</p>
                 <p class="humidityValue" id="day4Humidity">Loading...</p>
             </div>
             <div class="icons">
                 <p class="weather" id="day5"></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img5" alt=""></div>
+                <div class="image"><img src="dots.png" class="imgClass" id="img5"></div>
                 <p class="tempValue" id="day5Temp">Loading...</p>
                 <p class="windValue" id="day5Wind">Loading...</p>
                 <p class="humidityValue" id="day5Humidity">Loading...</p>
